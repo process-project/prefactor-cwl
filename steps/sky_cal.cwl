@@ -3,18 +3,13 @@ class: CommandLineTool
 
 baseCommand: python
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |
         FROM kernsuite/base:3
         RUN docker-apt-install prefactor
-
-requirements:
-  - class: InlineJavascriptRequirement
-  - class: EnvVarRequirement
-    envDef:
-      PYTHONPATH: /usr/lib/prefactor/scripts/
+        ENV PYTHONPATH /usr/lib/prefactor/scripts/
 
 inputs:
   ms:

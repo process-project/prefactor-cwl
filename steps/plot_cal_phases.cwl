@@ -22,7 +22,7 @@ class: CommandLineTool
 
 baseCommand: losoto
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |

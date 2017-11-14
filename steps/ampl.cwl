@@ -2,12 +2,11 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [python, /usr/lib/prefactor/scripts/amplitudes_losoto_3.py]
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
-      dockerFile: |
-        FROM kernsuite/base:3
-        RUN docker-apt-install prefactor
+      dockerFile:
+        $import: prefactor.Dockerfile
 
 inputs:
   globaldbname:

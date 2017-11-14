@@ -13,7 +13,7 @@ requirements:
     envDef:
       PYTHONPATH: /usr/lib/prefactor/scripts/
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |

@@ -11,7 +11,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: python
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |

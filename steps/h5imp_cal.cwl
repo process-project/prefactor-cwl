@@ -2,7 +2,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [python, /usr/lib/prefactor/scripts/losotoImporter.py, losoto.h5]
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |

@@ -22,7 +22,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [NDPPP, avg.type=average, flag.type=preflagger, flagamp.type=preflagger, msout=out.MS]
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/lofar
       dockerFile: |

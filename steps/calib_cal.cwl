@@ -31,7 +31,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [/usr/bin/calibrate-stand-alone]
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/calib_cal
       dockerFile: |

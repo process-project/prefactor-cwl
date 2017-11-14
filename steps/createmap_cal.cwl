@@ -33,7 +33,7 @@ baseCommand: [python,
              /usr/lib/python2.7/dist-packages/lofarpipe/recipes/plugins/PipelineStep_createMapfile.py,
              createmap_cal.mapfile]
 
-hints:
+requirements:
   DockerRequirement:
       dockerImageId: kernsuite/prefactor
       dockerFile: |
