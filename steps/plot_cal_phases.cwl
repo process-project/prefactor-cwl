@@ -20,7 +20,7 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: [singularity, exec, docker://kernsuite/base:3, losoto]
+baseCommand: [singularity, exec, docker://kernsuite/prefactor, losoto]
 
 requirements:
   InlineJavascriptRequirement: {}

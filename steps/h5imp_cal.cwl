@@ -1,6 +1,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [singularity, exec, docker://kernsuite/base:3, python, /usr/lib/prefactor/scripts/losotoImporter.py, losoto.h5]
+baseCommand: [singularity, exec, docker://kernsuite/prefactor, python, /usr/lib/prefactor/scripts/losotoImporter.py, losoto.h5]
 
 inputs:
   ms_array:

@@ -20,7 +20,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [singularity, exec, docker://kernsuite/base:3, NDPPP, msout=calibrated.MS]
+baseCommand: [singularity, exec, docker://kernsuite/prefactor, NDPPP, msout=calibrated.MS]
 
 inputs:
   msin:

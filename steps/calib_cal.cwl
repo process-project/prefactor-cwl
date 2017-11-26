@@ -29,7 +29,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [singularity, exec, docker://kernsuite/base:3, /usr/bin/calibrate-stand-alone]
+baseCommand: [singularity, exec, docker://kernsuite/prefactor, /usr/bin/calibrate-stand-alone]
 
 requirements:
   - class: InlineJavascriptRequirement
