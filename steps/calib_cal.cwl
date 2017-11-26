@@ -29,14 +29,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [/usr/bin/calibrate-stand-alone]
-
-hints:
-  DockerRequirement:
-      dockerImageId: kernsuite/calib_cal
-      dockerFile: |
-        FROM kernsuite/base:3
-        RUN docker-apt-install prefactor lofar
+baseCommand: [singularity, exec, docker://kernsuite/base:3, /usr/bin/calibrate-stand-alone]
 
 requirements:
   - class: InlineJavascriptRequirement

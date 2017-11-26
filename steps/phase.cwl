@@ -6,19 +6,13 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: python
+baseCommand: [singularity, exec, docker://kernsuite/base:3, python]
+
 requirements:
   - class: InlineJavascriptRequirement
   - class: EnvVarRequirement
     envDef:
       PYTHONPATH: /usr/lib/prefactor/scripts/
-
-hints:
-  DockerRequirement:
-      dockerImageId: kernsuite/prefactor
-      dockerFile: |
-        FROM kernsuite/base:3
-        RUN docker-apt-install prefactor
 
 inputs:
   losoto:

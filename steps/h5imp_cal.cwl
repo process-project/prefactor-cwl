@@ -1,13 +1,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [python, /usr/lib/prefactor/scripts/losotoImporter.py, losoto.h5]
-
-hints:
-  DockerRequirement:
-      dockerImageId: kernsuite/prefactor
-      dockerFile: |
-        FROM kernsuite/base:3
-        RUN docker-apt-install prefactor
+baseCommand: [singularity, exec, docker://kernsuite/base:3, python, /usr/lib/prefactor/scripts/losotoImporter.py, losoto.h5]
 
 inputs:
   ms_array:

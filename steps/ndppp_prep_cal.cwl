@@ -20,14 +20,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [NDPPP, msout=calibrated.MS]
-
-hints:
-  DockerRequirement:
-      dockerImageId: kernsuite/lofar
-      dockerFile: |
-        FROM kernsuite/base:3
-        RUN docker-apt-install lofar
+baseCommand: [singularity, exec, docker://kernsuite/base:3, NDPPP, msout=calibrated.MS]
 
 inputs:
   msin:
